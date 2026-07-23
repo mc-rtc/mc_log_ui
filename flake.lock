@@ -382,17 +382,14 @@
         "with-ros-trigger": "with-ros-trigger"
       },
       "locked": {
-        "lastModified": 1784742657,
-        "narHash": "sha256-/nakJEHqi2bF/U6o5faesEW0zNSrGvGsK3RLA82H3Mg=",
-        "owner": "mc-rtc",
-        "repo": "nixpkgs",
-        "rev": "d089869ac0523e8f987f0b3c13878685bf43f9e9",
-        "type": "github"
+        "lastModified": 1784830219,
+        "narHash": "sha256-sZ7MZ16EXkQF34ZNwwPUrUVr4NNhjOPCpIo3H/+KoZg=",
+        "path": "/home/arnaud/devel/mc-rtc-nix/nixpkgs",
+        "type": "path"
       },
       "original": {
-        "owner": "mc-rtc",
-        "repo": "nixpkgs",
-        "type": "github"
+        "path": "/home/arnaud/devel/mc-rtc-nix/nixpkgs",
+        "type": "path"
       }
     },
     "nix-ros-overlay": {
