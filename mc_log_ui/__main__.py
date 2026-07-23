@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from PyQt5 import QtGui, QtWidgets
+from .mc_log_ui import MCLogUI
+from .icon import get_icon
+
+import signal
+import sys
+
+def main():
+    app = QtWidgets.QApplication(sys.argv)
+    app.setWindowIcon(QtGui.QIcon(get_icon()))
+    gui = MCLogUI()
+    if len(sys.argv) > 1:
+        for fpath in sys.argv[1:]:
+            gui.load_csv(fpath, False)
+    gui.showMaximized()
+
+    def sigint_handler(*args):
+        gui.close()
+
+    signal.signal(signal.SIGINT, sigint_handler)
+
+    sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    main()
