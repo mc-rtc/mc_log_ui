@@ -7,17 +7,17 @@ name = "mc_log_ui"
 version = "1.0.0"
 description = "A log UI using PyQt5"
 authors = [
-    { name = "Your Name", email = "your@email.com" }
+  {name = "Your Name", email = "your@email.com"}
 ]
 dependencies = [
-    "PyQt5",
-    "numpy",
-    "matplotlib"
+  "PyQt5",
+  "numpy",
+  "matplotlib"
 ]
 requires-python = ">=3.7"
 
-[tool.setuptools]
-packages = ["mc_log_ui", "mc_log_ui.ui"]
-
 [project.scripts]
 mc_log_ui = "mc_log_ui.__main__:main"
+
+[tool.setuptools]
+packages = ["mc_log_ui", "mc_log_ui.ui"]

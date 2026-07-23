@@ -886,8 +886,8 @@ class MCLogTab(QtWidgets.QWidget):
                     action = QtWidgets.QAction(action_text, menu)
                     plot_name = item.actualText + qc.group(1)
                     action.triggered.connect(
-                        lambda checked, name=plot_name, label=axis_label: RemoveSpecialPlotButton(
-                            name, self, idx, label
+                        lambda checked, name=plot_name, label=axis_label: (
+                            RemoveSpecialPlotButton(name, self, idx, label)
                         )
                     )
                     menu.addAction(action)
@@ -901,8 +901,8 @@ class MCLogTab(QtWidgets.QWidget):
                     action = QtWidgets.QAction(action_text, menu)
                     plot_name = item.actualText + qc.group(1)
                     action.triggered.connect(
-                        lambda checked, name=plot_name, label=axis_label: RemoveSpecialPlotButton(
-                            name, self, idx, label + "_diff"
+                        lambda checked, name=plot_name, label=axis_label: (
+                            RemoveSpecialPlotButton(name, self, idx, label + "_diff")
                         )
                     )
                     menu.addAction(action)

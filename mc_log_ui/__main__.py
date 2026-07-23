@@ -8,6 +8,7 @@ from .icon import get_icon
 import signal
 import sys
 
+
 def main():
     app = QtWidgets.QApplication(sys.argv)
     app.setWindowIcon(QtGui.QIcon(get_icon()))
@@ -23,6 +24,7 @@ def main():
     signal.signal(signal.SIGINT, sigint_handler)
 
     sys.exit(app.exec_())
+
 
 if __name__ == "__main__":
     main()
