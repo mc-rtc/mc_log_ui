@@ -18,6 +18,7 @@ requires-python = ">=3.7"
 
 [project.scripts]
 mc_log_ui = "mc_log_ui.__main__:main"
+plot_logs = "mc_log_ui.plot_logs:main"
 
 [tool.setuptools]
 packages = ["mc_log_ui", "mc_log_ui.ui"]

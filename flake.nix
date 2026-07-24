@@ -43,6 +43,9 @@
                 wrapProgram $out/bin/mc_log_ui \
                   --set PYTHONPATH "$out/${python.sitePackages}:$PYTHONPATH" \
                   --set QT_PLUGIN_PATH "${qt5.qtbase}/${qt5.qtbase.qtPluginPrefix}"
+                wrapProgram $out/bin/plot_logs \
+                  --set PYTHONPATH "$out/${python.sitePackages}:$PYTHONPATH" \
+                  --set QT_PLUGIN_PATH "${qt5.qtbase}/${qt5.qtbase.qtPluginPrefix}"
               '';
             };
         };
