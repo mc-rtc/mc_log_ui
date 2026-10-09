@@ -1,8 +1,12 @@
 {
+  # Use
+  # nix shell .#py-mc-log-ui -c mc_log_ui
+  # nix shell .#py-mc-log-ui -c plot_logs
+  # nix run .#py-mc-log-ui # mc_log_ui
+
   description = "mc_log_ui: python utility to display mc_rtc logs";
 
-  # inputs.mc-rtc-nix.url = "github:mc-rtc/nixpkgs";
-  inputs.mc-rtc-nix.url = "path:/home/arnaud/devel/mc-rtc-nix/nixpkgs";
+  inputs.mc-rtc-nix.url = "github:mc-rtc/nixpkgs";
 
   outputs =
     inputs:
