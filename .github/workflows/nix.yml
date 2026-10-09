@@ -26,7 +26,7 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
           extraPullNames: "ros,gepetto"
       - run: nix flake check -L
-      - run: nix build -L
+      - run: nix build -L .#py-mc-log-ui
   check:
     if: always()
     name: check-macos-linux-nix
