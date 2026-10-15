@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME = mc_log_ui
+export PYBUILD_SYSTEM = pyproject
+
+%:
+	dh $@ --buildsystem=pybuild
+
+override_dh_auto_test:
+	:
+
+override_dh_install:
+	desktop-file-validate mc_log_ui.desktop
+	dh_install

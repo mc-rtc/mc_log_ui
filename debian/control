@@ -1,0 +1,34 @@
+Source: mc-log-ui
+Section: science
+Priority: optional
+Maintainer: Arnaud Tanguy <arn.tanguy@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ desktop-file-utils,
+ dh-sequence-python3,
+ pybuild-plugin-pyproject,
+ python3-all,
+ python3-build,
+ python3-installer,
+ python3-setuptools,
+ python3-wheel
+Standards-Version: 4.7.0
+Homepage: https://github.com/mc-rtc/mc_log_ui
+Vcs-Browser: https://github.com/mc-rtc/mc_log_ui
+Vcs-Git: https://github.com/mc-rtc/mc_log_ui.git
+
+Package: mc-log-ui
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python3-matplotlib,
+ python3-numpy,
+ python3-pyqt5
+Description: Qt log viewer for mc_rtc logs and CSV files
+ mc_log_ui is a PyQt-based desktop application for browsing, comparing and
+ exporting mc_rtc log files, and can also inspect compatible CSV logs.
+ .
+ The package installs the Python module together with the mc_log_ui and
+ plot_logs entry points and the desktop launcher.

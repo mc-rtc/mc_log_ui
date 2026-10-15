@@ -1,0 +1,33 @@
+name: "CI - Debian package"
+
+on:
+  push:
+    branches:
+      - devel
+      - master
+      - main
+  pull_request:
+    branches:
+      - devel
+      - master
+      - main
+  workflow_dispatch:
+
+jobs:
+  debian-package:
+    runs-on: ubuntu-24.04
+    env:
+      DEB_BASE_IMAGE: ubuntu:noble
+      DEB_SUITE: noble
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Build Debian package in Docker
+        run: bash tools/debian/build-in-docker.sh
+
+      - name: Upload Debian artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: debian-package-${{ env.DEB_SUITE }}
+          path: build/debian-artifacts/${{ env.DEB_SUITE }}/
+          if-no-files-found: error
